@@ -1,0 +1,43 @@
+body {
+  margin: auto;
+}
+.container {
+  /*height: 95vh;*/
+  margin: .5em;
+  border: 5px solid black;
+}
+
+.inner {
+  height: 95vh;
+  margin: .3em;
+  border: 1px solid black;
+}
+
+header h1 {
+  margin: .25em .5em -.6em;
+  font-family: 'Megrim', cursive;
+  font-size: 3.5em;
+}
+
+.menu {
+  display: none;
+  margin-top: -6em;
+  margin-right: 1.5em;
+  float: right;
+
+}
+
+li, a{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.sub-nav {
+  display: none;
+  margin-top: .75em;
+  margin-left: -3em;
+  border: 1px solid black;
+  line-height: 2em;
+  padding: .75em;
+  height: auto;
+}
