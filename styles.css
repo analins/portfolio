@@ -1,5 +1,6 @@
 body {
   margin: auto;
+  font-family: 'Didact Gothic', sans-serif;
 }
 .container {
   /*height: 95vh;*/
@@ -16,15 +17,37 @@ body {
 header h1 {
   margin: .25em .5em -.6em;
   font-family: 'Megrim', cursive;
-  font-size: 3.5em;
+  font-size: 3.75em;
 }
 
-.menu {
+.ul-menu{
   display: none;
-  margin-top: -6em;
+  margin-top: -7em;
   margin-right: 1.5em;
+  margin-bottom: 0;
   float: right;
+  cursor: pointer;
+}
 
+.main, .contact-section {
+  float: right;
+  margin-top: 10.5em;
+  margin-right: 4em;
+  line-height: 2.75em;
+}
+.main a, .contact-section a {
+  font-size: 2.5em;
+
+}
+.main a:hover, .contact-section a:hover {
+  color: mediumspringgreen;
+}
+
+.contact-section {
+  display: none;
+  float: none;
+  margin-left: 4em;
+  text-align: center;
 }
 
 li, a{

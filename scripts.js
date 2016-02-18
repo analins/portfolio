@@ -11,14 +11,14 @@ $(document).ready(function() {
 function getHome() {
   $('.my-name').on('click', function () {
     $('.main').show();
-    $('.menu').hide();
+    $('.ul-menu').hide();
   });
 }
 
 function switchMenu() {
   $('.main-menu').children('li').on('click', function () {
     $('.main').hide();
-    $('.menu').show();
+    $('.ul-menu').show();
   });
 }
 
@@ -39,7 +39,7 @@ function renderProjects() {
 function renderContact() {
   $('.contact-link').on('click', function () {
     $('.contents').empty();
-    $('.contents').append($('.contact'));
-    $('.contact').show();
+    $('.contents').append($('.contact-section'));
+    $('.contact-section').fadeIn('slow');
   });
 }
