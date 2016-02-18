@@ -1,4 +1,5 @@
 console.log('loaded');
+
 $(document).ready(function() {
   $('header').hide().show('slow');
   switchMenu();
@@ -10,8 +11,7 @@ $(document).ready(function() {
 
 function getHome() {
   $('.my-name').on('click', function () {
-    $('.main').show();
-    $('.ul-menu').hide();
+    location.reload(true);
   });
 }
 
@@ -30,16 +30,14 @@ function dropDown() {
 
 function renderProjects() {
   $('.projects-link').on('click', function () {
-    $('.contents').empty();
-    $('.contents').append($('.projects'));
-    $('.projects').show();
+    $('.contact-section').hide();
+    $('.project-display').show('slow');
   });
 }
 
 function renderContact() {
   $('.contact-link').on('click', function () {
-    $('.contents').empty();
-    $('.contents').append($('.contact-section'));
-    $('.contact-section').fadeIn('slow');
+    $('.project-display').hide();
+    $('.contact-section').show('slow');
   });
 }
