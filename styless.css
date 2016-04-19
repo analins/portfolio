@@ -1,0 +1,197 @@
+
+body {
+  margin: auto;
+}
+
+.container {
+  height: 96vh;
+  margin: .75em;
+}
+
+.pure-u-1 {
+  height: 33.4%;
+}
+
+/*GRID BOX COLORS*/
+.dark {
+  background: #303030;
+  color: #F2F2F2;
+}
+
+.light {
+  background: #FDFDFD;
+}
+
+.contact-me {
+  margin-top: 5em;
+  text-align: center;
+}
+.icons li {
+  display: inline;
+  margin-right: 2em;
+
+}
+
+
+@keyframes shake {
+  0% {
+    transform:rotate(7deg);
+    }
+  50% {
+      transform:rotate(-7deg);
+    }
+  100% {
+    transform:rotate(7deg);
+  }
+    }
+i:hover, .main-links a:hover{
+  animation: shake .2s 5;
+  color: mediumspringgreen;
+}
+
+.mobile {
+  display: none;
+}
+
+.main-links {
+  color: black;
+  text-align: center;
+}
+
+.main-links h2 {
+  margin: 2em auto 0;
+}
+
+h1 {
+  margin: .25em .5em -.6em;
+  font-family: 'Megrim', cursive;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+p {
+  font-family: 'monaco', sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+}
+
+.about {
+  margin: 1em;
+  line-height: 1.6em;
+}
+
+.ul-menu{
+  display: none;
+  margin-top: -5.25em;
+  margin-right: 2em;
+  margin-bottom: 0;
+  font-size: 1.25em;
+  float: right;
+  cursor: pointer;
+}
+
+.main, .contact-section {
+  float: right;
+  margin-top: 10.5em;
+  margin-right: 4em;
+  line-height: 2.75em;
+}
+.main a, .contact-section a {
+  font-size: 2.5em;
+
+}
+h1:hover, .contact-me:hover, .main a:hover, .contact-section a:hover, .menu-nav a:hover{
+  color: mediumspringgreen;
+}
+
+.contact-section {
+  display: none;
+  float: none;
+  margin-left: 4em;
+  text-align: center;
+}
+
+li, a{
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+.sub-nav {
+  display: none;
+  margin-top: .75em;
+  margin-left: -3em;
+  line-height: 2em;
+  padding: .75em;
+  height: auto;
+}
+
+.project-display {
+  display: none;
+  width: 90%;
+  margin: auto;
+  margin-top: 9.5em;
+
+  position:relative;
+  animation: comein 1.5s ease-in-out;
+}
+
+.project-display li{
+  display: inline-block;
+  margin: .75em;
+}
+
+.thumbnail {
+  width: 360px;
+  height: 234px;
+  border: 1px dotted grey;
+}
+
+.thumbnail:hover {
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+.one {
+  background-image: url('./images/rails_rest.png');
+}
+.two {
+  background-image: url('./images/get_sun.png');
+}
+.three {
+  background-image: url('./images/mean_krafty.png');
+}
+
+@media screen and (max-width: 64em) {
+  .extras {
+    display: none;
+  }
+  .pure-u-1 {
+    height: 25%;
+  }
+  .contact-me {
+    margin-top: 2em;
+  }
+
+  .main-links h2, .contact-me h2{
+    margin-top: .75em;
+    margin-bottom: -.25em;
+  }
+
+}
+
+@media screen and (max-width: 48em){
+  .extra, .extras {
+    display: none;
+  }
+  .pure-u-1 {
+    height: 20%;
+  }
+  .mobile {
+    display: block;
+  }
+
+}
