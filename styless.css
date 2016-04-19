@@ -195,7 +195,7 @@ li, a{
   }
 
   h1 {
-    font-size: 4em;
+    font-size: 3em;
   }
   .contact-me {
     margin-top: 1em;
@@ -203,6 +203,7 @@ li, a{
   .main-links h2, .contact-me h2{
     margin-top: .25em;
     margin-bottom: -.25em;
+    font-size: 1em;
   }
 
 }
