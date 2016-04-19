@@ -194,4 +194,15 @@ li, a{
     display: block;
   }
 
+  h1 {
+    font-size: 4em;
+  }
+  .contact-me {
+    margin-top: 1em;
+  }
+  .main-links h2, .contact-me h2{
+    margin-top: .25em;
+    margin-bottom: -.25em;
+  }
+
 }
