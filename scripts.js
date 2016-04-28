@@ -90,7 +90,7 @@ function previousItem() {
 // }
 //
 function dropDown() {
-  $('.menu-nav').on('click', function(){
+  $('.ul-menu').on('click', function(){
     $(this).find('.sub-nav').toggle('slow');
   });
 }
