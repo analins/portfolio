@@ -125,9 +125,17 @@ li, a{
   margin: -1.5em 1em .75em;
 
   cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+ -webkit-justify-content: right;
+     -ms-flex-pack: right;
   justify-content: right;
   text-align: right;
+  -webkit-flex-flow: column nowrap;
+     -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
 }
 .ul-menu i{
@@ -135,8 +143,13 @@ li, a{
 }
 .sub-nav {
   display: none;
+  -webkit-box-pack: center;
+ -webkit-justify-content: center;
+     -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-flex-flow: column nowrap;
+     -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   margin-top: 1em;
   font-family: 'Pathway Gothic One', sans-serif;
@@ -151,9 +164,9 @@ li, a{
   display: inline-flex;
   margin: -.5em .25em ;
 }
-.ul-menu:hover .sub-nav{
+/*.ul-menu:hover .sub-nav{
   display: block;
-}
+}*/
 
 footer {
   margin-top: .25em;
@@ -166,18 +179,23 @@ footer {
   height: 130vh;
   position: fixed;
   width: 100%;
-  transform: translateY(30vh);
-  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+  -webkit-transform: translateY(30vh);
+      transform: translateY(30vh);
+ -webkit-transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+ transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
 }
+
 .background:first-child {
   background-image: url("images/sidewalk.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  transform: translateY(-15vh);
+  -webkit-transform: translateY(-15vh);
+         transform: translateY(-15vh);
   z-index: 4;
 }
 .background:first-child .content-wrapper {
-  transform: translateY(15vh);
+  -webkit-transform: translateY(15vh);
+         transform: translateY(15vh);
 }
 .background:nth-child(2) {
   background: #F2F2F2;
@@ -196,15 +214,44 @@ footer {
 
 .content-wrapper {
   height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+ -webkit-justify-content: center;
+     -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-flex-flow: column nowrap;
+     -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   color: #000;
+  -webkit-transform: translateY(40vh);
+         transform: translateY(40vh);
   transform: translateY(40vh);
   will-change: transform;
-  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+  -webkit-transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+ transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
 }
+
+.background.down-scroll {
+  -webkit-transform: translate3d(0, -130vh, 0);
+          transform: translate3d(0, -130vh, 0);
+}
+.background.down-scroll .content-wrapper {
+  -webkit-transform: translateY(40vh);
+          transform: translateY(40vh);
+}
+.background.down-scroll + .background:not(.down-scroll) {
+  -webkit-transform: translate3d(0, -15vh, 0);
+          transform: translate3d(0, -15vh, 0);
+}
+.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
+}
+
 
 @keyframes bounce {
   16.65% {
@@ -259,7 +306,7 @@ footer {
   margin-left: -2.5em;
 }
 .project-links li{
-  display: inline-flex;;
+  display: inline-flex;
   margin: .5em;
   padding: .5em 1em;
   border-radius: 2px;
@@ -279,19 +326,6 @@ footer {
 
 .project-links li:hover {
   border: 2px solid mediumspringgreen;
-}
-
-.background.down-scroll {
-  transform: translate3d(0, -130vh, 0);
-}
-.background.down-scroll .content-wrapper {
-  transform: translateY(40vh);
-}
-.background.down-scroll + .background:not(.down-scroll) {
-  transform: translate3d(0, -15vh, 0);
-}
-.background.down-scroll + .background:not(.down-scroll) .content-wrapper {
-  transform: translateY(15vh);
 }
 
 
