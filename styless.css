@@ -176,6 +176,8 @@ footer {
 .background {
   overflow: hidden;
   will-change: transform;
+  -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
   height: 130vh;
   position: fixed;
   width: 100%;
@@ -183,6 +185,18 @@ footer {
       transform: translateY(30vh);
  -webkit-transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
  transition: all 1.2s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.background:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .background:first-child {
@@ -219,20 +233,38 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
- -webkit-justify-content: center;
-     -ms-flex-pack: center;
-  justify-content: center;
-  text-align: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-flex-flow: column nowrap;
-     -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  color: #000;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-transform: translateY(40vh);
-         transform: translateY(40vh);
-  transform: translateY(40vh);
+          transform: translateY(40vh);
   will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
- transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+  transition: all 1.7s cubic-bezier(0.22, 0.44, 0, 1);
+  color: #000;
+  text-align: center;
+}
+
+.background.up-scroll {
+  -webkit-transform: translate3d(0, -15vh, 0);
+          transform: translate3d(0, -15vh, 0);
+}
+.background.up-scroll .content-wrapper {
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
+}
+.background.up-scroll + .background {
+  -webkit-transform: translate3d(0, 30vh, 0);
+          transform: translate3d(0, 30vh, 0);
+}
+.background.up-scroll + .background .content-wrapper {
+  -webkit-transform: translateY(30vh);
+          transform: translateY(30vh);
 }
 
 .background.down-scroll {
@@ -382,7 +414,7 @@ footer {
 
   .tech {
     font-size: 1.1em;
-    top: 1.25em
+    top: 1.25em;
     font-style: italic;
 }
 }
